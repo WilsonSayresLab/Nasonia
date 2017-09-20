@@ -5,7 +5,8 @@ Wasp parent of origin effects
 Fastq and CuffDiff output files are available at .... 
 
 ### Methods:
-Update to include HISAT2 aligner and the generation of the alternate reference genome
+Update to include HISAT2 aligner and the generation of the alternate reference genome.
+
 RNA-seq reads were quality-checked using FastQC before and after trimming and filtering. Reads shorter than 50 bases, and base reads below the PHRED-scaled threshold quality of 10 at the 5’ end or 25 at the trailing 3’ end as well as below the average quality of 30 (within a sliding window of 4 bases) were filtered or clipped using TrimmomaticSE (33). A combined reference genome index and dictionary for XXX was generated using Spliced Transcripts Alignment to Reference (STARv2.5.2b)and the picard tools (version 1.1.19). Trimmed RNA-seq reads were mapped, and splice junctions extracted, using STARv2.5.2b read aligner. Bamtools2.4.0 was used to determine alignment quality (‘stats’ command), sort reads, mark duplicates, add read groups, and to index the BAM read files. CuffDiff (Cufflinks package), was used to run pairwise comparisons to identify significant (q ≤ 0.05) differential expression. CummeRbund was used to calculate distances between features (JSD plots). R ggplot2 and VennDiagrams were used to generate heat maps and Venn diagrams respectively
 
 ### Contents:
